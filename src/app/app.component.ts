@@ -11,8 +11,4 @@ export class AppComponent {
   constructor(private route:Router) {}
 
   title = 'Routing and Navigation';
-
-  goToDepartments(){
-    this.route.navigate(['/departmentList'])
-  }
 }
