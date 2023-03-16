@@ -3,3 +3,8 @@
     color:rgb(24, 101, 243);
     background-color: aliceblue;
 }
+
+.selected{
+    color: brown;
+    font-size: large;
+}

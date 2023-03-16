@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 
 @Component({
   selector: 'app-department-list',
@@ -8,7 +8,9 @@ import { Router } from '@angular/router';
 })
 export class DepartmentListComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  public selectedId:any;
+
+  constructor(private router:Router, private route:ActivatedRoute) { }
 
   departments = [
     {id: 1, name:'Angular'},
@@ -19,10 +21,18 @@ export class DepartmentListComponent implements OnInit {
   ];
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe((params:ParamMap)=>{
+      this.selectedId=params.get('id')
+    })
   }
 
   goToSpecificDept(department:any){
     this.router.navigate(['/departmentDetail', department.id])
+  }
+
+  isSelected(department:any){
+    return department.id === parseInt(this.selectedId);
+    
   }
 
 }
