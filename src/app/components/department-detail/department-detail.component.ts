@@ -35,4 +35,7 @@ export class DepartmentDetailComponent implements OnInit {
     // this.router.navigate(['../',{id:this.departmentId}], {relativeTo:this.route})
   }
 
+  goToDeptOverview(){
+    this.router.navigate([`departmentDetail/${this.departmentId}/overview`])
+  }
 }

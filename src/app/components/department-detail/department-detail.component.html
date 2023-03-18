@@ -1,5 +1,13 @@
 <p>You Selected Department With Id: {{departmentId}}</p>
 
+<br /><br /><br />
+<button (click)="goToDeptOverview()">Overview</button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a routerLink="contact">Contact</a>
+<router-outlet></router-outlet>
+
+<br /><br /><br />
+
 <a (click)="goPrevious()">Previous</a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a (click)="goNext()">Next</a>
