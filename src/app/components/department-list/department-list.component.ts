@@ -28,6 +28,7 @@ export class DepartmentListComponent implements OnInit {
 
   goToSpecificDept(department:any){
     this.router.navigate(['/departmentDetail', department.id])
+    // this.router.navigate([department.id], {relativeTo:this.route})
   }
 
   isSelected(department:any){

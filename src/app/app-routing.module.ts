@@ -9,10 +9,12 @@ const routes: Routes = [
     {
         path:'',
         redirectTo:'/departmentList',
+        // redirectTo:'/departmentList-(relative-navigation-test)',
         pathMatch:'full'
     },
     {
         path: 'departmentList',
+        // path: 'departmentList-(relative-navigation-test)',
         component: DepartmentListComponent
     },
     {
